@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container mt-4">
+            <div class="col-sm-6">
+                <form th:action="@{/save}" th:object=${concierto} method ="POST">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Modulo Concierto</h3>
+                        </div>
+                        <div class="card-body">
+                            <div> class ="form-group">
+                                <label>ID</label>
+                                <input th"field="*{id_evento}" type="text" class=""form-control"/>
+                            </div>
+                            <div> class ="form-group">
+                                <label>Artista</label>
+                                <input th"field="*{nombre_artista}" type="text" class=""form-control"/>
+                            </div>
+                            <div> class ="form-group">
+                                <label>Lugar</label>
+                                <input th"field="*{lugar}" type="text" class=""form-control"/>
+                            </div>
+                            <div> class ="form-group">
+                                <label>Capacidad</label>
+                                <input th"field="*{capacidad}" type="text" class=""form-control"/>
+                            </div>
+                            <div> class ="form-group">
+                                <label>Fecha</label>
+                                <input th"field="*{fecha}" type="text" class=""form-control"/>
+                            </div>
+                            <div> class ="form-group">
+                                <label>Precio</label>
+                                <input th"field="*{precio}" type="text" class=""form-control"/>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <input type="submit" value="Guardar" class="btn btn-success">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
